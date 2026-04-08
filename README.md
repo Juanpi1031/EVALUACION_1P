@@ -40,7 +40,43 @@
 
 **📝 Respuesta:**
 
-git clone -> opia un repositorio remoto completo (con todo su historial) a tu máquina local. Crea una carpeta con todos los archivos y la configuración de origen (origin).
+📝 Respuesta:
+
+## Diferencia entre los conceptos
+
+**git clone:** Comando de Git que copia un repositorio remoto completo (incluyendo todo su historial) a la máquina local. Crea una carpeta con todos los archivos y establece la conexión con el repositorio remoto como `origin`.
+
+**fork:** Operación de GitHub (no de Git) que crea una copia completa de un repositorio en tu propia cuenta de GitHub. Se usa para contribuir a proyectos ajenos sin tener permisos directos sobre el repositorio original.
+
+**git pull:** Comando que descarga los cambios del repositorio remoto y los fusiona automáticamente en la rama local actual. Es equivalente a ejecutar `git fetch` + `git merge`.
+
+---
+
+## Proceso realizado
+
+**¿Cómo se realizó el fork?**
+Se ingresó al repositorio original en GitHub, se hizo clic en el botón "Fork" ubicado en la parte superior derecha, se seleccionó la cuenta personal y se confirmó con "Create fork". GitHub creó una copia del repositorio en la cuenta personal.
+
+![fork](Images/fork.png)
+
+**¿Cómo se realizó el clone del fork?**
+Una vez creado el fork, se copió la URL del repositorio propio y se ejecutó el siguiente comando en la terminal:
+
+```bash
+git clone https://github.com/TU-USUARIO/NOMBRE-REPO.git
+cd NOMBRE-REPO
+```
+
+![clone](Images/clone.png)
+
+**¿Cómo se verificó que se estaba trabajando sobre el fork?**
+Se ejecutó el siguiente comando para verificar que el origen apunta al repositorio propio y no al original:
+
+```bash
+git remote -v
+```
+
+![remote](Images/remote.png)
 
 <!-- Escribe aquí tu respuesta a la Pregunta 1 -->
 
