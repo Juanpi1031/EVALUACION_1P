@@ -40,6 +40,8 @@
 
 **📝 Respuesta:**
 
+git clone -> opia un repositorio remoto completo (con todo su historial) a tu máquina local. Crea una carpeta con todos los archivos y la configuración de origen (origin).
+
 <!-- Escribe aquí tu respuesta a la Pregunta 1 -->
 
 ---
