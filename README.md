@@ -219,6 +219,20 @@ La revisión evita introducir errores o código mal estructurado en la rama prin
 - Que los commits sean descriptivos
 - Que no haya conflictos con la rama destino
 
+## Parte práctica
+
+**Segunda pregunta:** ¿Por qué es importante revisar un Pull Request antes de fusionarlo?
+
+Revisar un PR antes de fusionarlo garantiza la calidad del código, evita errores en producción y asegura que los cambios cumplen con los estándares del equipo.
+
+**Tercera pregunta:** ¿Qué tipo de observaciones se realizan durante la revisión de un Pull Request?
+
+Durante la revisión se valida la corrección lógica del código, el cumplimiento de convenciones de estilo, la presencia de pruebas, la ausencia de información sensible y que los commits sean descriptivos.
+
+
+
+
+
 <!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
 
 ---
