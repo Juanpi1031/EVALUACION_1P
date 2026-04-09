@@ -1,10 +1,10 @@
-# Universidad [Nombre de la Universidad]  
-## Facultad de [Nombre de la Facultad]  
-### Carrera de [Nombre de la Carrera]  
+# Universidad UNIVERSIDAD TECNICA DE AMBATO  
+## Facultad de Ingenieria en Sistemas Electronica e Industrial
+### Carrera de Software  
 
 **Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** ___________________________  
-**Fecha:** ___________________  
+**Nombre del Estudiante:** Juan Pablo Paredes Caicedo 
+**Fecha:** 08/04/2026 
 
 ---
 
@@ -50,7 +50,6 @@
 
 **git pull:** Comando que descarga los cambios del repositorio remoto y los fusiona automáticamente en la rama local actual. Es equivalente a ejecutar `git fetch` + `git merge`.
 
----
 
 ## Proceso realizado
 
@@ -101,6 +100,23 @@ git remote -v
 
 **📝 Respuesta:**
 
+📝 Respuesta:
+
+## ¿Qué es .gitignore?
+El archivo `.gitignore` le indica a Git qué archivos y carpetas debe ignorar y no incluir en el control de versiones. Es útil para excluir archivos generados automáticamente (logs, compilados), archivos temporales o información sensible.
+
+## Reglas configuradas
+- `*.log` — ignora todos los archivos con extensión .log
+- `temp/` — ignora la carpeta temp/ y todo su contenido
+- `doc/*.md` y `doc/*.txt` — ignora archivos .md y .txt dentro de doc/
+
+## Evidencia
+El comando `git status` muestra que `app.log`, `temp/` y los archivos dentro de `doc/` no son rastreados por Git, mientras que `prueba.md` y `prueba.txt` en la raíz sí aparecen.
+
+![gitignore](Images/Gitignore1.png)
+![gitignore](Images/Gitignore2.png)
+![gitignore](Images/Gitignore.png)
+
 <!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
 
 ---
@@ -131,6 +147,30 @@ git remote -v
 
 **📝 Respuesta:**
 
+📝 Respuesta:
+
+## Comandos utilizados
+
+```bash
+git flow init
+git flow feature start ingresar-encabezado
+git add README.md
+git commit -m "feat: ingresa encabezado con datos del estudiante"
+git flow feature finish ingresar-encabezado
+```
+
+## Descripción del proceso
+1. `git flow init` — inicializa Git Flow con las ramas main y develop
+2. `git flow feature start ingresar-encabezado` — crea la rama feature/ingresar-encabezado desde develop
+3. Se completó el encabezado del README con los datos personales
+4. `git flow feature finish ingresar-encabezado` — hace merge a develop y elimina la rama feature
+
+## Ventajas de Git Flow
+Git Flow permite organizar el trabajo en ramas específicas según su propósito. En proyectos colaborativos evita que código incompleto llegue a main. En proyectos de larga duración facilita el mantenimiento y el versionamiento, ya que cada funcionalidad se desarrolla de forma aislada.
+
+![gitflow](Images/Gitflow.png)
+
+
 <!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
 
 ---
@@ -160,6 +200,38 @@ git remote -v
 - El número y enlace al pull request.
 
 **📝 Respuesta:**
+
+📝 Respuesta:
+
+## Parte teórica
+
+**¿Qué es un Pull Request?**
+Un Pull Request es una solicitud formal para fusionar los cambios de una rama en otra. En flujos colaborativos permite que otros miembros del equipo revisen, comenten y aprueben los cambios antes de integrarlos a la rama principal, actuando como una puerta de calidad.
+
+**¿Por qué es importante revisar antes de fusionar?**
+La revisión evita introducir errores o código mal estructurado en la rama principal. Permite detectar bugs, validar que se cumplen los requisitos, asegurar que el código sigue los estándares del proyecto y compartir conocimiento entre el equipo.
+
+**¿Qué se valida en la revisión?**
+- Corrección lógica del código
+- Cumplimiento de convenciones de estilo
+- Presencia y calidad de pruebas
+- Ausencia de información sensible
+- Que los commits sean descriptivos
+- Que no haya conflictos con la rama destino
+
+## Parte práctica
+
+**Segunda pregunta:** ¿Por qué es importante revisar un Pull Request antes de fusionarlo?
+
+Revisar un PR antes de fusionarlo garantiza la calidad del código, evita errores en producción y asegura que los cambios cumplen con los estándares del equipo.
+
+**Tercera pregunta:** ¿Qué tipo de observaciones se realizan durante la revisión de un Pull Request?
+
+Durante la revisión se valida la corrección lógica del código, el cumplimiento de convenciones de estilo, la presencia de pruebas, la ausencia de información sensible y que los commits sean descriptivos.
+
+
+
+
 
 <!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
 
