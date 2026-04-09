@@ -229,8 +229,14 @@ Revisar un PR antes de fusionarlo garantiza la calidad del código, evita errore
 
 Durante la revisión se valida la corrección lógica del código, el cumplimiento de convenciones de estilo, la presencia de pruebas, la ausencia de información sensible y que los commits sean descriptivos.
 
-
-
+![PullReq](Images/PullReq.png)
+![PullReq](Images/PullReq1.png)
+![PullReq](Images/PullReq2.png)
+![PullReq](Images/PullReq3.png)
+![PullReq](Images/PullReq4.png)
+![PullReq](Images/PullReq5.png)
+![PullReq](Images/PullReq6.png)
+![PullReq](Images/PullReq7.png)
 
 
 <!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
