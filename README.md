@@ -272,6 +272,68 @@ Durante la revisión se valida la corrección lógica del código, el cumplimien
 
 **📝 Respuesta:**
 
+📝 Respuesta:
+
+## Procedimiento completo
+
+**Creación de ramas:**
+```bash
+git checkout develop
+git checkout -b ramaA
+git checkout develop
+git checkout -b ramaB
+```
+
+**Generación del conflicto:**
+```bash
+git checkout ramaA
+echo "Contenido A" > archivoA.txt
+git add archivoA.txt
+git commit -m "feat: agrega archivoA con Contenido A"
+
+git checkout ramaB
+echo "Contenido B" > archivoA.txt
+git add archivoA.txt
+git commit -m "feat: agrega archivoA con Contenido B"
+
+git checkout ramaA
+git merge ramaB
+# CONFLICT: Merge conflict in archivoA.txt
+```
+
+**Resolución del conflicto:**
+Se editó el archivo archivoA.txt combinando ambos contenidos:
+```
+Contenido A
+Contenido B
+```
+```bash
+git add archivoA.txt
+git commit -m "fix: resuelve conflicto combinando Contenido A y B"
+```
+
+**Merge hacia develop:**
+```bash
+git checkout develop
+git merge ramaA
+git push origin develop
+```
+
+**Eliminación de ramas:**
+```bash
+git branch -d ramaA
+git branch -d ramaB
+```
+
+## ¿Qué es un conflicto en Git?
+Un conflicto ocurre cuando Git no puede fusionar automáticamente dos ramas porque ambas modificaron el mismo archivo en la misma región de forma incompatible. En este caso, ambas ramas crearon archivoA.txt con contenido diferente, por lo que Git no supo cuál conservar y requirió intervención manual.
+
+## Evidencia
+![conflicto](Images/conflicto.png)
+![conflicto](Images/conflicto1.png)
+![conflicto](Images/conflicto2.png)
+![conflicto](Images/conflicto3.png)
+
 <!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
 
 ---
@@ -297,5 +359,38 @@ Durante la revisión se valida la corrección lógica del código, el cumplimien
 - Si hace falta agregar alguna evidencia adicional, agregue un tag adicional que sea `Version Final`.
 
 **📝 Respuesta:**
+
+📝 Respuesta:
+
+## Proceso realizado
+
+1. Se eliminó el archivo `archivoA.txt` desde la rama develop
+2. Se realizó merge de develop hacia main local
+3. Se enviaron los cambios al repositorio remoto con todos los tags
+
+```bash
+git checkout develop
+git rm archivoA.txt
+git commit -m "chore: elimina archivoA.txt"
+git push origin develop
+
+git checkout main
+git merge develop
+git push origin main
+git push origin --tags
+```
+
+## Versionamiento semántico
+
+El versionamiento semántico (SemVer) es un estándar para asignar números de versión con el formato **MAJOR.MINOR.PATCH** (por ejemplo `2.4.1`).
+
+- **MAJOR:** cambios incompatibles con versiones anteriores. Ejemplo: `1.0.0 → 2.0.0`
+- **MINOR:** nuevas funcionalidades compatibles con la versión anterior. Ejemplo: `2.3.0 → 2.4.0`
+- **PATCH:** correcciones de bugs compatibles hacia atrás. Ejemplo: `2.4.0 → 2.4.1`
+
+## Evidencia
+![Final](Images/Final.png)
+![Tag](Images/Tag.png)
+
 
 <!-- Escribe aquí tu respuesta completa a la Pregunta 6 -->
